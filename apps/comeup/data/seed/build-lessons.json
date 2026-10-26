@@ -1,0 +1,79 @@
+{
+  "_note": "Fictional sample data. Replace with lessons distilled from your own build record.",
+  "source": "Sample",
+  "derivedFrom": "sample",
+  "items": [
+    {
+      "id": "sample-lesson-1",
+      "title": "Score your customer segments before you email any of them",
+      "kind": "lesson",
+      "date": "2026-01-01",
+      "pull": "Price ceiling and urgency matter more than list size.",
+      "body": "Rank each segment by how much they can pay and how urgently they need it, then put most of your outreach into the top one.",
+      "seedTags": {
+        "job": [
+          "pick-customer",
+          "find-wedge",
+          "validate"
+        ],
+        "topic": [
+          "market",
+          "wedge",
+          "pricing",
+          "examples"
+        ],
+        "audience": [
+          "agency-owner",
+          "freelancer",
+          "solo-builder"
+        ],
+        "framework": [
+          "return-equation"
+        ],
+        "example": [
+          "rmg",
+          "church-apps"
+        ],
+        "outcome": [
+          "pivoted"
+        ]
+      }
+    },
+    {
+      "id": "sample-lesson-2",
+      "title": "Ship the smallest version that can be paid for",
+      "kind": "lesson",
+      "date": "2026-01-02",
+      "pull": "A paid pilot teaches more than a free beta.",
+      "body": "Charge for a narrow first version. Payment shows you the problem is real.",
+      "seedTags": {
+        "job": [
+          "pick-customer",
+          "find-wedge",
+          "validate"
+        ],
+        "topic": [
+          "market",
+          "wedge",
+          "pricing",
+          "examples"
+        ],
+        "audience": [
+          "agency-owner",
+          "freelancer",
+          "solo-builder"
+        ],
+        "framework": [
+          "return-equation"
+        ],
+        "example": [
+          "rmg",
+          "church-apps"
+        ],
+        "outcome": [
+          "pivoted"
+        ]
+      }
+    }
+  ]
+}

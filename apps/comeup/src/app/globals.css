@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Come Up — Royz Media Group, Agent Internet product line.
+
+   Ground and type are the shared house tokens, unchanged. This product
+   overrides exactly one variable, --accent, to the parent royal, because
+   Come Up is the house-brand product rather than a sibling with its own
+   colour. Copied from ../../brand/tokens.css — keep them in sync.
+------------------------------------------------------------------- */
+
+@theme {
+  --color-ink: #14161a;
+  --color-ink-deep: #0b0c0e;
+  --color-surface: #17181c;
+  --color-raised: #1d1f25;
+  --color-line: #26282e;
+  --color-line-soft: #1f2127;
+  --color-body: #c3c7ce;
+  --color-muted: #7e8593;
+  --color-faint: #565c68;
+  --color-chalk: #f1f2f4;
+
+  --color-royal: #2e52ff;
+  --color-royal-deep: #2141dc;
+
+  --color-live: #37d399;
+  --color-warn: #f5a524;
+  --color-hot: #ff5c5c;
+
+  --font-sans: var(--font-grotesk), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-mono-stack), "SF Mono", ui-monospace, Menlo, monospace;
+
+  --ease-step: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --nav-h: 64px;
+    --accent: #2e52ff;
+    --accent-dim: color-mix(in oklab, var(--accent) 22%, transparent);
+    --accent-line: color-mix(in oklab, var(--accent) 38%, transparent);
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 24px);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-ink-deep);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--color-chalk);
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  .num, td.num, .tabular {
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-mono);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .wrap { width: 100%; max-width: 1180px; margin-inline: auto; padding-inline: 20px; }
+  @media (min-width: 768px) { .wrap { padding-inline: 32px; } }
+
+  .wrap-tight { width: 100%; max-width: 880px; margin-inline: auto; padding-inline: 20px; }
+  @media (min-width: 768px) { .wrap-tight { padding-inline: 32px; } }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    height: 42px; padding-inline: 18px;
+    border-radius: 10px; border: 1px solid transparent;
+    font-size: 14px; font-weight: 500; line-height: 1;
+    transition: transform 0.18s var(--ease-out), background 0.18s, border-color 0.18s, color 0.18s;
+    cursor: pointer;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover:not(:disabled) { background: color-mix(in oklab, var(--accent) 88%, #fff); }
+  .btn-ghost { border-color: var(--color-line); color: var(--color-chalk); }
+  .btn-ghost:hover { border-color: var(--accent-line); }
+  .btn-lg { height: 50px; padding-inline: 24px; font-size: 15px; }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    height: 26px; padding-inline: 10px;
+    border-radius: 99px; border: 1px solid var(--color-line);
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--color-muted);
+  }
+  .pill-live { border-color: color-mix(in oklab, var(--color-live) 40%, transparent); color: var(--color-live); }
+  .pill-accent { border-color: var(--accent-line); color: var(--accent); }
+  .dot { width: 6px; height: 6px; border-radius: 99px; background: currentColor; }
+
+  /* ---- product-specific ------------------------------------------------ */
+
+  /* The one decorative device in the house system is a diagonal cut. It shows
+     up here as the hairline that opens a section and as the accent slash. */
+  .rule {
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-line), transparent 42%);
+  }
+
+  .field {
+    width: 100%;
+    background: var(--color-ink);
+    border: 1px solid var(--color-line);
+    border-radius: 11px;
+    color: var(--color-chalk);
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 12px 14px;
+    transition: border-color 0.18s, background 0.18s;
+  }
+  .field::placeholder { color: var(--color-faint); }
+  .field:hover { border-color: color-mix(in oklab, var(--color-line) 60%, var(--accent)); }
+  .field:focus { outline: none; border-color: var(--accent); background: #101116; }
+
+  .label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 8px;
+  }
+
+  .tag {
+    display: inline-flex; align-items: center; gap: 5px;
+    height: 22px; padding-inline: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--color-line-soft);
+    background: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.02em;
+    color: var(--color-muted);
+    white-space: nowrap;
+  }
+  .tag-on { border-color: var(--accent-line); color: var(--accent); background: color-mix(in oklab, var(--accent) 8%, transparent); }
+  .tag-axis { color: var(--color-faint); }
+
+  .link-underline {
+    color: var(--color-chalk);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-line);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.18s;
+  }
+  .link-underline:hover { text-decoration-color: var(--accent); }
+
+  .prose-plan p { margin-bottom: 14px; color: var(--color-body); line-height: 1.72; }
+  .prose-plan p:last-child { margin-bottom: 0; }
+}
+
+@layer utilities {
+  .grain::before {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .fade-up {
+    animation: fade-up 0.6s var(--ease-step) both;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  .stagger-1 { animation-delay: 0.05s; }
+  .stagger-2 { animation-delay: 0.1s; }
+  .stagger-3 { animation-delay: 0.15s; }
+  .stagger-4 { animation-delay: 0.2s; }
+  .stagger-5 { animation-delay: 0.25s; }
+}

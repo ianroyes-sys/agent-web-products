@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Royz Media Group — Agent Internet product line
+   Shared tokens across Arsenal Index, Legible, and Come Up.
+
+   Ground and type are constant so the three read as one house.
+   Each product overrides exactly one variable, --accent, which is
+   what makes them siblings rather than clones.
+------------------------------------------------------------------- */
+
+@theme {
+  /* House ground — lifted from the RMG brand kit, unchanged. */
+  --color-ink: #14161a;
+  --color-ink-deep: #0b0c0e;
+  --color-surface: #17181c;
+  --color-raised: #1d1f25;
+  --color-line: #26282e;
+  --color-line-soft: #1f2127;
+  --color-body: #c3c7ce;
+  --color-muted: #7e8593;
+  --color-faint: #565c68;
+  --color-chalk: #f1f2f4;
+
+  /* Parent brand. Always available for the RMG lockup even inside a product. */
+  --color-royal: #2e52ff;
+  --color-royal-deep: #2141dc;
+
+  /* Signal colors, shared. */
+  --color-live: #37d399;
+  --color-warn: #f5a524;
+  --color-hot: #ff5c5c;
+
+  --font-sans: var(--font-grotesk), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-mono-stack), "SF Mono", ui-monospace, Menlo, monospace;
+
+  --ease-step: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --nav-h: 64px;
+    /* Arsenal Index signature. Amber reads as ordnance and alert against
+       the ink ground — the radar is a warning surface, not a dashboard. */
+    --accent: #f5a524;
+    --accent-dim: color-mix(in oklab, var(--accent) 22%, transparent);
+    --accent-line: color-mix(in oklab, var(--accent) 38%, transparent);
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 24px);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-ink-deep);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+
+  ::selection { background: var(--accent); color: #0b0c0e; }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--color-chalk);
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* Tabular figures everywhere money appears. Misaligned dollar columns are
+     the fastest way to make a data product look amateur. */
+  .num, td.num, .tabular {
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-mono);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .wrap { width: 100%; max-width: 1180px; margin-inline: auto; padding-inline: 20px; }
+  @media (min-width: 768px) { .wrap { padding-inline: 32px; } }
+
+  .wrap-wide { width: 100%; max-width: 1400px; margin-inline: auto; padding-inline: 20px; }
+  @media (min-width: 768px) { .wrap-wide { padding-inline: 32px; } }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    height: 42px; padding-inline: 18px;
+    border-radius: 10px; border: 1px solid transparent;
+    font-size: 14px; font-weight: 500; line-height: 1;
+    transition: transform 0.18s var(--ease-out), background 0.18s, border-color 0.18s, color 0.18s;
+    cursor: pointer;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--accent); color: #0b0c0e; font-weight: 600; }
+  .btn-primary:hover { background: color-mix(in oklab, var(--accent) 86%, #fff); }
+  .btn-ghost { border-color: var(--color-line); color: var(--color-chalk); }
+  .btn-ghost:hover { border-color: var(--accent-line); }
+
+  /* Status pill. Freshness is the product in a data business, so the
+     generated-on date gets first-class visual treatment, not a footnote. */
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    height: 26px; padding-inline: 10px;
+    border-radius: 99px; border: 1px solid var(--color-line);
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--color-muted);
+    white-space: nowrap;
+  }
+  .pill-live { border-color: color-mix(in oklab, var(--color-live) 40%, transparent); color: var(--color-live); }
+  .dot { width: 6px; height: 6px; border-radius: 99px; background: currentColor; }
+
+  /* ---- Arsenal Index additions ---------------------------------- */
+
+  /* Faint engineering grid. Reads as a plotting surface rather than
+     decoration, and costs nothing. */
+  .grid-ground {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--color-line) 55%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--color-line) 55%, transparent) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 10%, transparent 75%);
+  }
+
+  .glass {
+    background: color-mix(in oklab, var(--color-surface) 72%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  .stat {
+    position: relative; overflow: hidden;
+    background: linear-gradient(180deg, var(--color-raised), var(--color-surface));
+    border: 1px solid var(--color-line);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .stat::after {
+    content: ""; position: absolute; inset: 0 0 auto 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-line), transparent);
+  }
+  .stat-value {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(26px, 5vw, 38px);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--color-chalk);
+  }
+
+  /* Data tables. Sticky head, hairline rules, no zebra stripes — a
+     Bloomberg panel, not a spreadsheet. */
+  .tbl { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13.5px; }
+  .tbl thead th {
+    position: sticky; top: 0; z-index: 2;
+    background: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--color-faint); font-weight: 500;
+    text-align: left; white-space: nowrap;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .tbl tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--color-line-soft);
+    vertical-align: middle;
+  }
+  .tbl tbody tr { transition: background 0.14s var(--ease-out); }
+  .tbl tbody tr:hover { background: color-mix(in oklab, var(--color-raised) 70%, transparent); }
+  .tbl .r { text-align: right; }
+
+  .sortable { cursor: pointer; user-select: none; }
+  .sortable:hover { color: var(--color-body); }
+
+  .band-dot { width: 8px; height: 8px; border-radius: 99px; flex: none; }
+
+  .input {
+    width: 100%; height: 40px; padding-inline: 12px;
+    background: var(--color-ink);
+    border: 1px solid var(--color-line);
+    border-radius: 9px;
+    color: var(--color-chalk);
+    font-size: 13.5px;
+    transition: border-color 0.16s;
+  }
+  .input::placeholder { color: var(--color-faint); }
+  .input:focus { border-color: var(--accent-line); outline: none; }
+
+  select.input {
+    appearance: none;
+    padding-right: 30px;
+    background-image: linear-gradient(45deg, transparent 50%, var(--color-muted) 50%),
+                      linear-gradient(135deg, var(--color-muted) 50%, transparent 50%);
+    background-position: calc(100% - 15px) 17px, calc(100% - 10px) 17px;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+  }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    height: 30px; padding-inline: 12px;
+    border-radius: 99px;
+    border: 1px solid var(--color-line);
+    background: var(--color-ink);
+    font-size: 12px; color: var(--color-muted);
+    white-space: nowrap;
+    transition: border-color 0.16s, color 0.16s, background 0.16s;
+    cursor: pointer;
+  }
+  .chip:hover { color: var(--color-chalk); border-color: var(--color-faint); }
+  .chip[data-on="true"] {
+    border-color: var(--accent-line);
+    color: var(--accent);
+    background: color-mix(in oklab, var(--accent) 10%, transparent);
+  }
+
+  .tag {
+    display: inline-flex; align-items: center;
+    height: 20px; padding-inline: 7px;
+    border-radius: 5px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--color-line);
+    color: var(--color-muted);
+  }
+
+  .scroll-x { overflow-x: auto; overscroll-behavior-x: contain; }
+  .scroll-x::-webkit-scrollbar { height: 8px; }
+  .scroll-x::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 99px; }
+  .scroll-x::-webkit-scrollbar-track { background: transparent; }
+
+  .rule {
+    height: 1px; border: 0;
+    background: linear-gradient(90deg, var(--color-line), transparent);
+  }
+
+  .prose-block p { color: var(--color-body); line-height: 1.68; }
+  .prose-block p + p { margin-top: 14px; }
+}
+
+@layer utilities {
+  .fade-up { animation: fade-up 0.6s var(--ease-out) both; }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  .sweep { animation: sweep 3.6s linear infinite; transform-origin: center; }
+  @keyframes sweep {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .ping-dot { animation: ping-dot 2.4s var(--ease-out) infinite; }
+  @keyframes ping-dot {
+    0% { opacity: 0.9; transform: scale(0.6); }
+    70%, 100% { opacity: 0; transform: scale(2.6); }
+  }
+}

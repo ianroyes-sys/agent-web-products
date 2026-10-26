@@ -1,0 +1,136 @@
+/* ------------------------------------------------------------------
+   Royz Media Group — Agent Internet product line
+   Shared tokens across Arsenal Index, Legible, and Come Up.
+
+   Ground and type are constant so the three read as one house.
+   Each product overrides exactly one variable, --accent, which is
+   what makes them siblings rather than clones.
+------------------------------------------------------------------- */
+
+@theme {
+  /* House ground — lifted from the RMG brand kit, unchanged. */
+  --color-ink: #14161a;
+  --color-ink-deep: #0b0c0e;
+  --color-surface: #17181c;
+  --color-raised: #1d1f25;
+  --color-line: #26282e;
+  --color-line-soft: #1f2127;
+  --color-body: #c3c7ce;
+  --color-muted: #7e8593;
+  --color-faint: #565c68;
+  --color-chalk: #f1f2f4;
+
+  /* Parent brand. Always available for the RMG lockup even inside a product. */
+  --color-royal: #2e52ff;
+  --color-royal-deep: #2141dc;
+
+  /* Signal colors, shared. */
+  --color-live: #37d399;
+  --color-warn: #f5a524;
+  --color-hot: #ff5c5c;
+
+  --font-sans: var(--font-grotesk), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-mono-stack), "SF Mono", ui-monospace, Menlo, monospace;
+
+  --ease-step: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --nav-h: 64px;
+    /* Per-product override. Defaults to the parent royal. */
+    --accent: var(--color-royal);
+    --accent-dim: color-mix(in oklab, var(--accent) 22%, transparent);
+    --accent-line: color-mix(in oklab, var(--accent) 38%, transparent);
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 24px);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-ink-deep);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--color-chalk);
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  /* Tabular figures everywhere money appears. Misaligned dollar columns are
+     the fastest way to make a data product look amateur. */
+  .num, td.num, .tabular {
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-mono);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .wrap { width: 100%; max-width: 1180px; margin-inline: auto; padding-inline: 20px; }
+  @media (min-width: 768px) { .wrap { padding-inline: 32px; } }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    height: 42px; padding-inline: 18px;
+    border-radius: 10px; border: 1px solid transparent;
+    font-size: 14px; font-weight: 500; line-height: 1;
+    transition: transform 0.18s var(--ease-out), background 0.18s, border-color 0.18s;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-ghost { border-color: var(--color-line); color: var(--color-chalk); }
+  .btn-ghost:hover { border-color: var(--accent-line); }
+
+  /* Status pill. Freshness is the product in a data business, so the
+     generated-on date gets first-class visual treatment, not a footnote. */
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    height: 26px; padding-inline: 10px;
+    border-radius: 99px; border: 1px solid var(--color-line);
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--color-muted);
+  }
+  .pill-live { border-color: color-mix(in oklab, var(--color-live) 40%, transparent); color: var(--color-live); }
+  .dot { width: 6px; height: 6px; border-radius: 99px; background: currentColor; }
+}

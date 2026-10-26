@@ -1,0 +1,1220 @@
+{
+  "id": "radiancetech-com-2026-08-16",
+  "version": "0.1.0",
+  "domain": "radiancetech.com",
+  "siteUrl": "https://www.radiancetech.com/",
+  "company": "Radiance Technologies - Concepts to Capabilities",
+  "location": "Huntsville, Alabama",
+  "generated": "2026-08-16T17:54:33.960Z",
+  "durationMs": 10165,
+  "score": 48,
+  "grade": "F",
+  "headline": "An agent asked 9 standard buyer questions about Radiance Technologies - Concepts to Capabilities today. It could not answer 6 of them, and 5 hard-filter fields are missing entirely. Legibility score: 48.",
+  "dimensions": [
+    {
+      "id": "discoverable",
+      "label": "Discoverable",
+      "question": "Can an agent legally and technically reach this content?",
+      "score": 77,
+      "weight": 0.14,
+      "summary": "Crawlable, with a machine-first summary published.",
+      "evidence": [
+        {
+          "label": "robots.txt served",
+          "status": "pass",
+          "detail": "A robots.txt exists, so crawler policy is at least stated.",
+          "source": "https://www.radiancetech.com/robots.txt",
+          "points": 8,
+          "possible": 8
+        },
+        {
+          "label": "No blanket crawl block",
+          "status": "pass",
+          "detail": "No site-wide Disallow. Crawlers can reach the content.",
+          "source": "https://www.radiancetech.com/robots.txt",
+          "points": 10,
+          "possible": 10
+        },
+        {
+          "label": "GPTBot posture",
+          "status": "partial",
+          "detail": "GPTBot is unnamed. Access is implied rather than granted, and it changes whenever the CDN default changes.",
+          "source": "https://www.radiancetech.com/robots.txt",
+          "points": 3,
+          "possible": 5
+        },
+        {
+          "label": "ClaudeBot posture",
+          "status": "partial",
+          "detail": "ClaudeBot is unnamed. Access is implied rather than granted, and it changes whenever the CDN default changes.",
+          "source": "https://www.radiancetech.com/robots.txt",
+          "points": 3,
+          "possible": 5
+        },
+        {
+          "label": "PerplexityBot posture",
+          "status": "partial",
+          "detail": "PerplexityBot is unnamed. Access is implied rather than granted, and it changes whenever the CDN default changes.",
+          "source": "https://www.radiancetech.com/robots.txt",
+          "points": 3,
+          "possible": 5
+        },
+        {
+          "label": "Google-Extended posture",
+          "status": "partial",
+          "detail": "Google-Extended is unnamed. Access is implied rather than granted, and it changes whenever the CDN default changes.",
+          "source": "https://www.radiancetech.com/robots.txt",
+          "points": 3,
+          "possible": 5
+        },
+        {
+          "label": "sitemap.xml",
+          "status": "pass",
+          "detail": "Sitemap resolves with 4 URLs, giving crawlers a complete inventory.",
+          "source": "https://www.radiancetech.com/sitemap.xml",
+          "points": 10,
+          "possible": 10
+        },
+        {
+          "label": "Sitemap declared in robots.txt",
+          "status": "fail",
+          "detail": "The sitemap is not declared in robots.txt, so it is only found by convention.",
+          "source": "https://www.radiancetech.com/robots.txt",
+          "points": 0,
+          "possible": 4
+        },
+        {
+          "label": "llms.txt",
+          "status": "pass",
+          "detail": "An llms.txt exists — a curated, machine-first summary of what this company is and does.",
+          "source": "https://www.radiancetech.com/llms.txt",
+          "points": 16,
+          "possible": 16
+        },
+        {
+          "label": "MCP descriptor",
+          "status": "fail",
+          "detail": "No /.well-known/mcp.json. Agents can read this company but cannot transact with it.",
+          "source": "https://www.radiancetech.com/.well-known/mcp.json",
+          "points": 0,
+          "possible": 8
+        },
+        {
+          "label": "Homepage indexable",
+          "status": "pass",
+          "detail": "The homepage is indexable.",
+          "points": 6,
+          "possible": 6
+        },
+        {
+          "label": "HTTPS preserved end to end",
+          "status": "pass",
+          "detail": "The homepage resolves over HTTPS.",
+          "points": 6,
+          "possible": 6
+        }
+      ]
+    },
+    {
+      "id": "parseable",
+      "label": "Parseable",
+      "question": "Once an agent has the page, can it extract facts from it?",
+      "score": 73,
+      "weight": 0.16,
+      "summary": "Structured data present; the company resolves as an entity.",
+      "evidence": [
+        {
+          "label": "JSON-LD structured data",
+          "status": "pass",
+          "detail": "11 JSON-LD blocks found across the crawl, declaring: BreadcrumbList, ListItem, Organization, WebPage, WebSite, BlogPosting, ImageObject, Person.",
+          "source": "https://www.radiancetech.com/",
+          "points": 14,
+          "possible": 14
+        },
+        {
+          "label": "Organization schema",
+          "status": "pass",
+          "detail": "An Organization-class entity is declared, so the company resolves as a thing rather than a page.",
+          "points": 12,
+          "possible": 12
+        },
+        {
+          "label": "Service or Offer schema",
+          "status": "fail",
+          "detail": "Services exist only as headings and paragraphs. Nothing is comparable field-by-field.",
+          "points": 0,
+          "possible": 8
+        },
+        {
+          "label": "FAQ schema",
+          "status": "fail",
+          "detail": "No FAQPage schema. Buyer questions are answered, if at all, in unmarked prose.",
+          "points": 0,
+          "possible": 6
+        },
+        {
+          "label": "Structured data parses cleanly",
+          "status": "pass",
+          "detail": "All JSON-LD blocks are valid JSON.",
+          "points": 4,
+          "possible": 4
+        },
+        {
+          "label": "Semantic landmarks",
+          "status": "partial",
+          "detail": "3 of 4 landmark elements (main, header, footer, nav) present. Landmarks tell a parser which text is content and which is chrome.",
+          "source": "https://www.radiancetech.com/",
+          "points": 6,
+          "possible": 8
+        },
+        {
+          "label": "Single H1",
+          "status": "pass",
+          "detail": "Exactly one H1 states the page's subject.",
+          "quote": "CONCEPTS TO CAPABILITIES",
+          "source": "https://www.radiancetech.com/",
+          "points": 6,
+          "possible": 6
+        },
+        {
+          "label": "Heading hierarchy",
+          "status": "partial",
+          "detail": "2 heading-level skips break the outline a parser builds from the page.",
+          "source": "https://www.radiancetech.com/",
+          "points": 3,
+          "possible": 6
+        },
+        {
+          "label": "Title and meta description",
+          "status": "partial",
+          "detail": "Missing or thin: meta description.",
+          "quote": "Concepts to Capabilities - Radiance Technologies",
+          "source": "https://www.radiancetech.com/",
+          "points": 4,
+          "possible": 8
+        },
+        {
+          "label": "Content present without JavaScript",
+          "status": "pass",
+          "detail": "6,927 characters of text are in the served HTML. Agents that do not run a browser still read the page.",
+          "source": "https://www.radiancetech.com/",
+          "points": 12,
+          "possible": 12
+        },
+        {
+          "label": "Critical information outside PDFs",
+          "status": "pass",
+          "detail": "No capability statements or rate sheets are locked in PDFs.",
+          "points": 8,
+          "possible": 8
+        },
+        {
+          "label": "Images carry alt text",
+          "status": "partial",
+          "detail": "63 of 64 homepage images have no alt text. Anything stated only inside an image is unreadable.",
+          "source": "https://www.radiancetech.com/",
+          "points": 0.1,
+          "possible": 4
+        },
+        {
+          "label": "Language declared",
+          "status": "pass",
+          "detail": "Document language declared as \"en-US\".",
+          "points": 2,
+          "possible": 2
+        },
+        {
+          "label": "Structured elements used",
+          "status": "pass",
+          "detail": "13 list or table elements. Lists and tables are the cheapest structure a page can carry.",
+          "points": 2,
+          "possible": 2
+        }
+      ]
+    },
+    {
+      "id": "priced",
+      "label": "Priced",
+      "question": "Can an agent determine what working with this company costs?",
+      "score": 30,
+      "weight": 0.12,
+      "summary": "No figures, but the pricing model is at least described.",
+      "evidence": [
+        {
+          "label": "Pricing page exists",
+          "status": "fail",
+          "detail": "No pricing page. An agent comparing vendors has nothing to put in the cost column.",
+          "points": 0,
+          "possible": 20
+        },
+        {
+          "label": "Numeric prices published",
+          "status": "fail",
+          "detail": "No dollar figures anywhere on the site. Cost is unknowable without a human conversation.",
+          "points": 0,
+          "possible": 24
+        },
+        {
+          "label": "Units and tiers stated",
+          "status": "fail",
+          "detail": "No units, tiers, or 'starting at' language. Any number present cannot be normalized against a competitor.",
+          "points": 0,
+          "possible": 10
+        },
+        {
+          "label": "No pure contact-gate",
+          "status": "pass",
+          "detail": "Nothing hides cost behind a contact form.",
+          "points": 14,
+          "possible": 14
+        },
+        {
+          "label": "Contract types stated",
+          "status": "fail",
+          "detail": "No mention of FFP, T&M, CPFF, or IDIQ. In GovCon these are the pricing model, and stating them is the honest substitute for a price tag.",
+          "points": 0,
+          "possible": 16
+        },
+        {
+          "label": "Rate schedule discoverable",
+          "status": "pass",
+          "detail": "A rate card, labor-category schedule, or GSA price list is referenced.",
+          "quote": "…nd Other Government Agencies in the Space and Missile defense arena. It is an ID/IQ fixed price per labor category contract with work assigned through competitive Task Orders. The SETAC contractor conducts studies,…",
+          "source": "https://www.radiancetech.com/setac/about-setac/",
+          "points": 16,
+          "possible": 16
+        },
+        {
+          "label": "Market note",
+          "status": "info",
+          "detail": "Published list pricing is rare in defense services and its absence is not a failure of nerve. What is scored here is whether cost is knowable at all: rate schedules, contract types, and vehicle ceilings are the legible substitute.",
+          "points": 0,
+          "possible": 0
+        }
+      ]
+    },
+    {
+      "id": "comparable",
+      "label": "Comparable",
+      "question": "Can an agent place this firm side by side with a rival and see a difference?",
+      "score": 39,
+      "weight": 0.13,
+      "summary": "Some specifics, but no explicit contrast with alternatives.",
+      "evidence": [
+        {
+          "label": "Named programs and platforms",
+          "status": "partial",
+          "detail": "2 named programs or platforms referenced (hypersonic, hypersonics). These are the terms a buyer's agent actually searches on.",
+          "quote": "…ut Us Employee-Ownership Locations What We Do Capabilities Intelligence Cyber Directed Energy AI/ML Hypersonics Space Radiance University AFSIM Training Radiance Gives Innovation Bowl Contracts Vehicles PO Term…",
+          "source": "https://www.radiancetech.com/",
+          "points": 9,
+          "possible": 18
+        },
+        {
+          "label": "Quantified claims",
+          "status": "pass",
+          "detail": "4 quantified statements found (20 years; 11 employees; 117 employees; 1000 employees). Numbers are the only claims an agent can rank.",
+          "points": 14,
+          "possible": 14
+        },
+        {
+          "label": "Specific technical disciplines",
+          "status": "pass",
+          "detail": "7 specific disciplines named (machine learning, prototyping, rf, cybersecurity, hardware-in-the-loop).",
+          "points": 12,
+          "possible": 12
+        },
+        {
+          "label": "Explicit differentiator",
+          "status": "fail",
+          "detail": "No sentence anywhere contrasts this firm with an alternative. An agent asked to compare has to invent the comparison.",
+          "points": 0,
+          "possible": 10
+        },
+        {
+          "label": "Comparison page",
+          "status": "fail",
+          "detail": "No comparison or alternatives page. The firm has no say in how it is described next to rivals.",
+          "points": 0,
+          "possible": 12
+        },
+        {
+          "label": "Ideal-customer statement",
+          "status": "fail",
+          "detail": "No statement of who this firm is for. Agents will include it in the wrong shortlists and exclude it from the right ones.",
+          "points": 0,
+          "possible": 8
+        },
+        {
+          "label": "Capability copy is specific, not atmospheric",
+          "status": "fail",
+          "detail": "Fog density is 26.9 weighted marketing phrases per 1,000 words. Above roughly 6, capability statements stop carrying comparable information.",
+          "quote": "Radiance Technologies Strengthens Innovation Capability with Strategic Acquisition of Phased n Research",
+          "source": "https://www.radiancetech.com/",
+          "points": 0,
+          "possible": 8
+        },
+        {
+          "label": "Service taxonomy stated",
+          "status": "fail",
+          "detail": "No NAICS codes. The firm's services are described only in its own words, in a market that procures by code.",
+          "points": 0,
+          "possible": 8
+        }
+      ]
+    },
+    {
+      "id": "proven",
+      "label": "Proven",
+      "question": "Can an agent verify that this firm has actually done the work?",
+      "score": 57,
+      "weight": 0.12,
+      "summary": "Customers and certifications are both on the record.",
+      "evidence": [
+        {
+          "label": "Named customers",
+          "status": "pass",
+          "detail": "9 customer organizations named (Department of Defense, DoD, NASA, U.S. Army, SMDC).",
+          "quote": "…elligence We provide Intelligence analysis and warfighter support to the Intelligence Community and Department of Defense to enable effective military operations and protect our troops from harm. We specialize in Intellig…",
+          "source": "https://www.radiancetech.com/",
+          "points": 18,
+          "possible": 18
+        },
+        {
+          "label": "Past performance documented",
+          "status": "partial",
+          "detail": "Past performance is mentioned in passing but has no dedicated, structured home.",
+          "quote": "…in DARPA Contract to Pioneer Microsystem-Induced Catalysis Radiance Technologies has been awarded a prime contract by the Defense Advanced Research Projects Agency (DARPA) Microsystems Technology Office (MTO) for t…",
+          "source": "https://www.radiancetech.com/news/",
+          "points": 8,
+          "possible": 16
+        },
+        {
+          "label": "Quantified outcomes",
+          "status": "fail",
+          "detail": "No outcome is quantified. Every claim of impact is adjectival.",
+          "points": 0,
+          "possible": 12
+        },
+        {
+          "label": "Certifications stated",
+          "status": "pass",
+          "detail": "3 certifications named (ISO9001:2015, AS9100, AS9100D).",
+          "quote": "…ems Engineering and Prototyping Division and Microelectronics Product Division maintain a certified ISO9001:2015 with AS9100:2016 Rev D Quality Management System (QMS) for engineering support services in the area…",
+          "points": 14,
+          "possible": 14
+        },
+        {
+          "label": "Attributed testimonials",
+          "status": "fail",
+          "detail": "No attributed testimonials. Unattributed praise is discarded by any model weighing evidence.",
+          "points": 0,
+          "possible": 8
+        },
+        {
+          "label": "Dated recognition",
+          "status": "fail",
+          "detail": "No dated awards or recognition. Undated praise cannot be weighed for recency.",
+          "points": 0,
+          "possible": 6
+        },
+        {
+          "label": "Named leadership",
+          "status": "pass",
+          "detail": "Leadership is named, giving the entity real people to resolve against.",
+          "quote": "…iological, and Nuclear Latest News Radiance Technologies Promotes Defense Sector Manager, Executive Vice President Darien J. Hammett to Chief Operating Officer Radiance Technologies Announces Strategic Partnership…",
+          "source": "https://www.radiancetech.com/setac/about-setac/",
+          "points": 6,
+          "possible": 6
+        }
+      ]
+    },
+    {
+      "id": "current",
+      "label": "Current",
+      "question": "Can an agent tell whether any of this is still true?",
+      "score": 64,
+      "weight": 0.08,
+      "summary": "Newest dated content is from 2025.",
+      "evidence": [
+        {
+          "label": "Copyright year current",
+          "status": "pass",
+          "detail": "Footer reads 2026. The site looks maintained.",
+          "quote": "© 2026",
+          "points": 12,
+          "possible": 12
+        },
+        {
+          "label": "Dated content within 12 months",
+          "status": "partial",
+          "detail": "The newest dated item on the site is from 2025. Anything a model reads here it will treat as possibly obsolete.",
+          "points": 8,
+          "possible": 16
+        },
+        {
+          "label": "News, blog, or changelog",
+          "status": "pass",
+          "detail": "Updates are published at /news.",
+          "source": "https://www.radiancetech.com/news/",
+          "points": 10,
+          "possible": 10
+        },
+        {
+          "label": "Sitemap lastmod fresh",
+          "status": "fail",
+          "detail": "The sitemap carries no lastmod dates, so crawlers cannot tell what changed.",
+          "points": 0,
+          "possible": 8
+        },
+        {
+          "label": "Last-Modified header",
+          "status": "fail",
+          "detail": "No Last-Modified header on the homepage.",
+          "points": 0,
+          "possible": 4
+        },
+        {
+          "label": "No stale artifacts",
+          "status": "pass",
+          "detail": "No placeholder or abandoned content found.",
+          "points": 6,
+          "possible": 6
+        }
+      ]
+    },
+    {
+      "id": "fog",
+      "label": "Fog index",
+      "question": "Is the copy specific enough to carry information at all?",
+      "score": 0,
+      "weight": 0.1,
+      "summary": "Dense marketing fog — the copy states very little.",
+      "evidence": [
+        {
+          "label": "Marketing-speak density",
+          "status": "fail",
+          "detail": "26.9 weighted stock phrases per 1,000 words across 5,767 words of site copy. Under 2 reads as a company describing itself; over 8 reads as a company describing nothing.",
+          "quote": "Radiance Technologies Strengthens Innovation Capability with Strategic Acquisition of Phased n Research",
+          "source": "https://www.radiancetech.com/",
+          "points": 0,
+          "possible": 60
+        },
+        {
+          "label": "No single dominant filler phrase",
+          "status": "fail",
+          "detail": "\"innovative / innovation\" appears 22 times. A phrase repeated this often is the site's actual thesis, whether the company meant it to be or not.",
+          "points": 0,
+          "possible": 20
+        },
+        {
+          "label": "Foggiest sentence is survivable",
+          "status": "fail",
+          "detail": "At least one sentence is built almost entirely from stock phrases. This is the sentence a model will summarize the company with.",
+          "quote": "Radiance Technologies Strengthens Innovation Capability with Strategic Acquisition of Phased n Research",
+          "source": "https://www.radiancetech.com/",
+          "points": 0,
+          "possible": 20
+        }
+      ]
+    }
+  ],
+  "govcon": {
+    "score": 31,
+    "signals": [
+      {
+        "id": "cage",
+        "label": "CAGE code",
+        "found": false,
+        "why": "The CAGE code is how a contracting system resolves a company name to an entity. Without it, an agent cannot confirm the firm it found is the firm in SAM.",
+        "weight": "critical"
+      },
+      {
+        "id": "uei",
+        "label": "UEI (SAM Unique Entity ID)",
+        "found": false,
+        "why": "The UEI replaced DUNS as the federal identity key. It is the single field that makes a firm machine-resolvable across SAM, USAspending, and every prime's supplier portal.",
+        "weight": "critical"
+      },
+      {
+        "id": "duns",
+        "label": "DUNS (legacy)",
+        "found": false,
+        "why": "Retired federally in 2022, but still requested by some primes and databases. Cheap to publish alongside the UEI.",
+        "weight": "medium"
+      },
+      {
+        "id": "naics",
+        "label": "NAICS codes",
+        "found": false,
+        "why": "Every federal opportunity is filtered by NAICS before anything else. A firm that never states its codes cannot be matched to the solicitations it should be winning.",
+        "weight": "critical"
+      },
+      {
+        "id": "setaside",
+        "label": "Set-aside / socioeconomic status",
+        "found": false,
+        "why": "Set-aside status is a hard filter on a majority of small-business solicitations. Unstated status means the firm is excluded from the searches it would automatically win.",
+        "weight": "critical"
+      },
+      {
+        "id": "size",
+        "label": "Business size standard",
+        "found": false,
+        "why": "Primes building a subcontracting plan filter on size before capability. Stating it removes a round of email.",
+        "weight": "high"
+      },
+      {
+        "id": "cmmc",
+        "label": "CMMC status",
+        "found": false,
+        "why": "CMMC is becoming a gate on any contract touching CUI. An agent screening for 'CMMC Level 2' matches on the literal string or not at all.",
+        "weight": "critical"
+      },
+      {
+        "id": "nist171",
+        "label": "NIST SP 800-171 / DFARS 7012",
+        "found": false,
+        "why": "The compliance posture behind CMMC. Naming it, with an SPRS score, is the difference between 'claims compliance' and 'documented compliance'.",
+        "weight": "high"
+      },
+      {
+        "id": "quality",
+        "label": "Quality certifications (ISO / AS9100 / CMMI)",
+        "found": true,
+        "value": "ISO9001:2015",
+        "quote": "…ems Engineering and Prototyping Division and Microelectronics Product Division maintain a certified ISO9001:2015 with AS9100:2016 Rev D Quality Management System (QMS) for engineering support services in the…",
+        "source": "https://www.radiancetech.com/quality/",
+        "why": "Quality registrations are checkbox filters in supplier qualification. They are trivially verifiable and their absence is read as absence, not as silence.",
+        "weight": "high"
+      },
+      {
+        "id": "vehicles",
+        "label": "Contract vehicles",
+        "found": true,
+        "value": "GSA Multiple Award Schedules GSA Information Technology",
+        "quote": "…Contract? * ReMOTe Table & J-Cable GSA Multiple Award Schedules GSA Information Technology Services OASIS AMCOM EXPRESS Other Contract Message * CAPTCHA Who We Are Employee-Ownership Our Culture Our Values…",
+        "source": "https://www.radiancetech.com/",
+        "why": "A vehicle is a shortcut to award. An agent asked 'can we buy from them this quarter' is really asking which vehicle they are on.",
+        "weight": "critical"
+      },
+      {
+        "id": "pastperf",
+        "label": "Past performance citations",
+        "found": true,
+        "value": "prime contract",
+        "quote": "…in DARPA Contract to Pioneer Microsystem-Induced Catalysis Radiance Technologies has been awarded a prime contract by the Defense Advanced Research Projects Agency (DARPA) Microsystems Technology Office (MTO) for t…",
+        "source": "https://www.radiancetech.com/news/",
+        "why": "Past performance is the evidence layer of every proposal. If it exists only in a PDF or a proposal library, no agent can weigh it.",
+        "weight": "high"
+      },
+      {
+        "id": "clearance",
+        "label": "Facility clearance / cleared staff",
+        "found": false,
+        "why": "Clearance level is a hard gate on classified work. Firms routinely hold an FCL and never mention it, and get filtered out of the exact work they are cleared for.",
+        "weight": "high"
+      },
+      {
+        "id": "agencies",
+        "label": "Customer agencies named",
+        "found": true,
+        "value": "NASA",
+        "quote": "…ry capabilities. Learn more Space We provide Space solutions and w arfighter support to DoD and NASA customers . We use our expertise in space-based communication , space-based technologies, ISR…",
+        "source": "https://www.radiancetech.com/",
+        "why": "Agency names are the vocabulary buyers search in. 'Federal customers' matches nothing; 'Missile Defense Agency' matches the query.",
+        "weight": "high"
+      },
+      {
+        "id": "location",
+        "label": "Physical address stated",
+        "found": true,
+        "value": "310 Bob Heath Drive Huntsville, AL 35806",
+        "quote": "…ght Path Research Select Page Contact Our corporate headquarters is located at: 310 Bob Heath Drive Huntsville, AL 35806 Our office hours are Monday-Friday from 8:00 AM – 5:00 PM (Central). If you have questions or…",
+        "source": "https://www.radiancetech.com/contact/",
+        "why": "Geographic filters are the second most common after NAICS. 'Near Redstone Arsenal' is a literal proximity query an agent runs against a literal address.",
+        "weight": "high"
+      },
+      {
+        "id": "poc",
+        "label": "Teaming / subcontracting point of contact",
+        "found": false,
+        "why": "Primes looking for a teammate need a named route in. A generic contact form is where teaming inquiries go to die.",
+        "weight": "medium"
+      },
+      {
+        "id": "capstatement",
+        "label": "Capability statement in HTML",
+        "found": false,
+        "why": "Nearly every firm has one as a PDF. Almost none publish it as a web page, which is the only form a retrieval pipeline can actually read.",
+        "weight": "medium"
+      }
+    ],
+    "verdict": "Radiance Technologies - Concepts to Capabilities is missing 5 of the 6 fields an agent uses as hard filters: CAGE code, UEI (SAM Unique Entity ID), NAICS codes, Set-aside / socioeconomic status, CMMC status. Any query specifying one of these excludes the firm silently.",
+    "failedQuery": "\"Find me a [set-aside status] in Huntsville, Alabama with [CMMC level] under NAICS [code] for missile-defense software.\""
+  },
+  "fog": {
+    "per1k": 26.9,
+    "score": 0,
+    "words": 5767,
+    "hits": [
+      {
+        "phrase": "innovative / innovation",
+        "count": 22,
+        "weight": 2
+      },
+      {
+        "phrase": "capabilities",
+        "count": 43,
+        "weight": 1
+      },
+      {
+        "phrase": "solutions",
+        "count": 22,
+        "weight": 1
+      },
+      {
+        "phrase": "strategic",
+        "count": 12,
+        "weight": 1
+      },
+      {
+        "phrase": "enable",
+        "count": 3,
+        "weight": 2
+      },
+      {
+        "phrase": "game-changing",
+        "count": 2,
+        "weight": 3
+      },
+      {
+        "phrase": "leverage",
+        "count": 2,
+        "weight": 2
+      },
+      {
+        "phrase": "empower",
+        "count": 2,
+        "weight": 2
+      },
+      {
+        "phrase": "world class",
+        "count": 1,
+        "weight": 3
+      },
+      {
+        "phrase": "cutting edge",
+        "count": 1,
+        "weight": 3
+      },
+      {
+        "phrase": "state of the art",
+        "count": 1,
+        "weight": 3
+      },
+      {
+        "phrase": "full spectrum",
+        "count": 1,
+        "weight": 3
+      },
+      {
+        "phrase": "agile",
+        "count": 2,
+        "weight": 1
+      }
+    ],
+    "worstSentence": "Radiance Technologies Strengthens Innovation Capability with Strategic Acquisition of Phased n Research",
+    "worstSource": "https://www.radiancetech.com/"
+  },
+  "pages": [
+    {
+      "path": "/",
+      "url": "https://www.radiancetech.com/",
+      "status": 200,
+      "ok": true,
+      "bytes": 153334,
+      "ms": 540,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/.well-known/mcp.json",
+      "url": "https://www.radiancetech.com/.well-known/mcp.json",
+      "status": 404,
+      "ok": false,
+      "bytes": 70112,
+      "ms": 1932,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/about",
+      "url": "https://www.radiancetech.com/setac/about-setac/",
+      "status": 200,
+      "ok": true,
+      "bytes": 79193,
+      "ms": 5238,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/ai.txt",
+      "url": "https://www.radiancetech.com/ai.txt",
+      "status": 404,
+      "ok": false,
+      "bytes": 146,
+      "ms": 62,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/capabilities",
+      "url": "https://www.radiancetech.com/capabilities/",
+      "status": 200,
+      "ok": true,
+      "bytes": 77254,
+      "ms": 3904,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/certifications",
+      "url": "https://www.radiancetech.com/certifications",
+      "status": 404,
+      "ok": false,
+      "bytes": 73403,
+      "ms": 2293,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/contact",
+      "url": "https://www.radiancetech.com/contact/",
+      "status": 200,
+      "ok": true,
+      "bytes": 116428,
+      "ms": 1371,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/contract-vehicles",
+      "url": "https://www.radiancetech.com/wp-content/uploads/2020/05/contract-vehicles.png",
+      "status": 200,
+      "ok": true,
+      "bytes": 800000,
+      "ms": 3370,
+      "contentType": "image/png"
+    },
+    {
+      "path": "/docs",
+      "url": "https://www.radiancetech.com/docs",
+      "status": 404,
+      "ok": false,
+      "bytes": 73353,
+      "ms": 3110,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/faq",
+      "url": "https://www.radiancetech.com/faq/",
+      "status": 200,
+      "ok": true,
+      "bytes": 76392,
+      "ms": 5057,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/llms.txt",
+      "url": "https://www.radiancetech.com/llms.txt",
+      "status": 200,
+      "ok": true,
+      "bytes": 177130,
+      "ms": 77,
+      "contentType": "text/plain"
+    },
+    {
+      "path": "/news",
+      "url": "https://www.radiancetech.com/news/",
+      "status": 200,
+      "ok": true,
+      "bytes": 100498,
+      "ms": 115,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/past-performance",
+      "url": "https://www.radiancetech.com/past-performance",
+      "status": 404,
+      "ok": false,
+      "bytes": 73413,
+      "ms": 3111,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/pricing",
+      "url": "https://www.radiancetech.com/pricing",
+      "status": 404,
+      "ok": false,
+      "bytes": 73368,
+      "ms": 2410,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/quality",
+      "url": "https://www.radiancetech.com/quality/",
+      "status": 200,
+      "ok": true,
+      "bytes": 75741,
+      "ms": 128,
+      "contentType": "text/html",
+      "discovered": true
+    },
+    {
+      "path": "/radiance-capabilities",
+      "url": "https://www.radiancetech.com/radiance-capabilities/",
+      "status": 200,
+      "ok": true,
+      "bytes": 95914,
+      "ms": 966,
+      "contentType": "text/html",
+      "discovered": true
+    },
+    {
+      "path": "/radiance-technologies-acquires-verus-research-to-enhance-capabilities-and-grow-customer-base",
+      "url": "https://www.radiancetech.com/radiance-technologies-acquires-verus-research-to-enhance-capabilities-and-grow-customer-base/",
+      "status": 200,
+      "ok": true,
+      "bytes": 86427,
+      "ms": 857,
+      "contentType": "text/html",
+      "discovered": true
+    },
+    {
+      "path": "/robots.txt",
+      "url": "https://www.radiancetech.com/robots.txt",
+      "status": 200,
+      "ok": true,
+      "bytes": 24,
+      "ms": 166,
+      "contentType": "text/plain"
+    },
+    {
+      "path": "/services",
+      "url": "https://www.radiancetech.com/engineering-services/services/",
+      "status": 200,
+      "ok": true,
+      "bytes": 84829,
+      "ms": 5712,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/sitemap.xml",
+      "url": "https://www.radiancetech.com/sitemap.xml",
+      "status": 200,
+      "ok": true,
+      "bytes": 998,
+      "ms": 88,
+      "contentType": "text/xml"
+    },
+    {
+      "path": "/who-we-are",
+      "url": "https://www.radiancetech.com/who-we-are/",
+      "status": 200,
+      "ok": true,
+      "bytes": 102678,
+      "ms": 124,
+      "contentType": "text/html",
+      "discovered": true
+    }
+  ],
+  "fixes": [
+    {
+      "id": "govcon-cage",
+      "title": "State CAGE code on the site",
+      "dimension": "govcon",
+      "impact": 5,
+      "effort": "low",
+      "detail": "The CAGE code is how a contracting system resolves a company name to an entity. Without it, an agent cannot confirm the firm it found is the firm in SAM.",
+      "artifact": "llms.txt generator"
+    },
+    {
+      "id": "govcon-naics",
+      "title": "State NAICS codes on the site",
+      "dimension": "govcon",
+      "impact": 5,
+      "effort": "low",
+      "detail": "Every federal opportunity is filtered by NAICS before anything else. A firm that never states its codes cannot be matched to the solicitations it should be winning.",
+      "artifact": "llms.txt generator"
+    },
+    {
+      "id": "govcon-setaside",
+      "title": "State Set-aside / socioeconomic status on the site",
+      "dimension": "govcon",
+      "impact": 5,
+      "effort": "low",
+      "detail": "Set-aside status is a hard filter on a majority of small-business solicitations. Unstated status means the firm is excluded from the searches it would automatically win.",
+      "artifact": "llms.txt generator"
+    },
+    {
+      "id": "govcon-uei",
+      "title": "State UEI (SAM Unique Entity ID) on the site",
+      "dimension": "govcon",
+      "impact": 5,
+      "effort": "low",
+      "detail": "The UEI replaced DUNS as the federal identity key. It is the single field that makes a firm machine-resolvable across SAM, USAspending, and every prime's supplier portal.",
+      "artifact": "llms.txt generator"
+    },
+    {
+      "id": "pricing-page",
+      "title": "Build a parseable pricing page",
+      "dimension": "priced",
+      "impact": 5,
+      "effort": "medium",
+      "detail": "Even without list prices: contract types, labor-category structure, typical engagement sizes, and vehicle ceilings. Something has to fill the cost column.",
+      "artifact": "Pricing page template"
+    },
+    {
+      "id": "past-performance",
+      "title": "Give past performance a structured home",
+      "dimension": "proven",
+      "impact": 5,
+      "effort": "medium",
+      "detail": "One page, one entry per engagement: customer, scope, period, role (prime or sub), outcome. This is the single highest-value page most GovCon sites are missing.",
+      "artifact": "Past performance page template"
+    },
+    {
+      "id": "programs",
+      "title": "Name the programs and platforms supported",
+      "dimension": "comparable",
+      "impact": 5,
+      "effort": "medium",
+      "detail": "Within release constraints, name them. These are the literal strings buyers search on, and 'advanced defense systems' matches none of them."
+    },
+    {
+      "id": "pricing-numbers",
+      "title": "Publish at least one real number",
+      "dimension": "priced",
+      "impact": 5,
+      "effort": "medium",
+      "detail": "A range, a starting point, or a published rate schedule. An agent comparing three vendors will rank the two with numbers above the one without, every time.",
+      "artifact": "Pricing page template"
+    },
+    {
+      "id": "govcon-cmmc",
+      "title": "State CMMC status on the site",
+      "dimension": "govcon",
+      "impact": 5,
+      "effort": "medium",
+      "detail": "CMMC is becoming a gate on any contract touching CUI. An agent screening for 'CMMC Level 2' matches on the literal string or not at all.",
+      "artifact": "llms.txt generator"
+    },
+    {
+      "id": "schema-service",
+      "title": "Mark up each service as a structured entity",
+      "dimension": "parseable",
+      "impact": 4,
+      "effort": "low",
+      "detail": "One Service node per capability, each with an area served and an audience, so a requirement can be matched field by field.",
+      "artifact": "JSON-LD schema pack"
+    },
+    {
+      "id": "schema-faq",
+      "title": "Publish a structured FAQ",
+      "dimension": "parseable",
+      "impact": 4,
+      "effort": "low",
+      "detail": "The buyer questions already arriving by email, answered on the page in FAQPage markup. This is the format answer engines quote most directly.",
+      "artifact": "Structured FAQ generator"
+    },
+    {
+      "id": "govcon-size",
+      "title": "State Business size standard on the site",
+      "dimension": "govcon",
+      "impact": 4,
+      "effort": "low",
+      "detail": "Primes building a subcontracting plan filter on size before capability. Stating it removes a round of email.",
+      "artifact": "llms.txt generator"
+    },
+    {
+      "id": "differentiator",
+      "title": "State one checkable difference",
+      "dimension": "comparable",
+      "impact": 4,
+      "effort": "low",
+      "detail": "A sentence that a competitor could not truthfully copy. Everything else on the site is table stakes."
+    },
+    {
+      "id": "fog",
+      "title": "Rewrite the foggiest copy",
+      "dimension": "fog",
+      "impact": 4,
+      "effort": "medium",
+      "detail": "Replace stock phrases with specifics: what was built, for whom, on what, with what result. Fog is the one defect that survives every redesign."
+    },
+    {
+      "id": "govcon-clearance",
+      "title": "State Facility clearance / cleared staff on the site",
+      "dimension": "govcon",
+      "impact": 4,
+      "effort": "medium",
+      "detail": "Clearance level is a hard gate on classified work. Firms routinely hold an FCL and never mention it, and get filtered out of the exact work they are cleared for.",
+      "artifact": "llms.txt generator"
+    },
+    {
+      "id": "govcon-nist171",
+      "title": "State NIST SP 800-171 / DFARS 7012 on the site",
+      "dimension": "govcon",
+      "impact": 4,
+      "effort": "medium",
+      "detail": "The compliance posture behind CMMC. Naming it, with an SPRS score, is the difference between 'claims compliance' and 'documented compliance'.",
+      "artifact": "llms.txt generator"
+    },
+    {
+      "id": "comparison",
+      "title": "Write the comparison page yourself",
+      "dimension": "comparable",
+      "impact": 4,
+      "effort": "medium",
+      "detail": "If the firm does not describe how it differs from the alternatives, a model will infer it — usually wrongly, and usually to the incumbent's benefit. An honest comparison page is a defensive asset.",
+      "artifact": "Comparison page template"
+    },
+    {
+      "id": "landmarks",
+      "title": "Add semantic landmarks",
+      "dimension": "parseable",
+      "impact": 3,
+      "effort": "low",
+      "detail": "main, header, nav, footer. Landmarks tell a parser which text is content and which is furniture."
+    },
+    {
+      "id": "fit",
+      "title": "Say who this is for, and who it is not for",
+      "dimension": "comparable",
+      "impact": 3,
+      "effort": "low",
+      "detail": "Explicit fit criteria let agents screen correctly in both directions, which raises lead quality more than it lowers lead volume."
+    },
+    {
+      "id": "robots-policy",
+      "title": "State AI crawler policy explicitly",
+      "dimension": "discoverable",
+      "impact": 3,
+      "effort": "low",
+      "detail": "4 major AI crawlers are unnamed in robots.txt, so their access depends on an inherited default. Name them.",
+      "artifact": "robots.txt template"
+    },
+    {
+      "id": "contract-types",
+      "title": "State the contract types worked under",
+      "dimension": "priced",
+      "impact": 3,
+      "effort": "low",
+      "detail": "FFP, T&M, CPFF, IDIQ. One line on the pricing page. In this market that line is the pricing model.",
+      "artifact": "Pricing page template"
+    },
+    {
+      "id": "outcomes",
+      "title": "Attach a number to at least one result",
+      "dimension": "proven",
+      "impact": 3,
+      "effort": "medium",
+      "detail": "One measured outcome per case study. Cleared for release, approximate is fine — adjectives are not."
+    },
+    {
+      "id": "dates",
+      "title": "Date the content",
+      "dimension": "current",
+      "impact": 3,
+      "effort": "medium",
+      "detail": "Published and updated dates in visible text and in markup. Undated content is treated as possibly obsolete."
+    },
+    {
+      "id": "mcp",
+      "title": "Expose an MCP endpoint for agents",
+      "dimension": "discoverable",
+      "impact": 3,
+      "effort": "medium",
+      "detail": "A /.well-known/mcp.json plus a small server lets an agent query capabilities, check availability, and open a teaming inquiry without a human in the loop. Almost no competitor has one.",
+      "artifact": "MCP server scaffold"
+    },
+    {
+      "id": "alt-text",
+      "title": "Caption the images",
+      "dimension": "parseable",
+      "impact": 2,
+      "effort": "low",
+      "detail": "Anything stated only inside an image does not exist to a text-based agent."
+    },
+    {
+      "id": "sitemap-lastmod",
+      "title": "Emit accurate lastmod dates",
+      "dimension": "current",
+      "impact": 2,
+      "effort": "low",
+      "detail": "lastmod values that reflect real edits, so crawlers spend their budget on what changed."
+    },
+    {
+      "id": "testimonials",
+      "title": "Attribute the quotes",
+      "dimension": "proven",
+      "impact": 2,
+      "effort": "medium",
+      "detail": "A named person and organization behind each quote. Unattributed praise is discarded as noise."
+    }
+  ],
+  "agentView": [
+    {
+      "id": "what-do-they-do",
+      "question": "What exactly does Radiance Technologies - Concepts to Capabilities do?",
+      "answerable": "partial",
+      "fromSite": "2 named programs or platforms referenced (hypersonic, hypersonics). These are the terms a buyer's agent actually searches on."
+    },
+    {
+      "id": "socioeconomic",
+      "question": "Is Radiance Technologies - Concepts to Capabilities an SDVOSB, 8(a), WOSB, or HUBZone firm?",
+      "answerable": "no",
+      "fromSite": "Nothing on the site states a set-aside status. An agent filtering by it excludes the firm."
+    },
+    {
+      "id": "cmmc",
+      "question": "Is Radiance Technologies - Concepts to Capabilities CMMC compliant, and at what level?",
+      "answerable": "no",
+      "fromSite": "CMMC is never mentioned. The query 'CMMC Level 2 contractor' cannot return this firm."
+    },
+    {
+      "id": "vehicles",
+      "question": "What contract vehicles does Radiance Technologies - Concepts to Capabilities hold?",
+      "answerable": "yes",
+      "fromSite": "Stated on site: GSA Multiple Award Schedules GSA Information Technology"
+    },
+    {
+      "id": "identity",
+      "question": "What is Radiance Technologies - Concepts to Capabilities's UEI and NAICS coverage?",
+      "answerable": "no",
+      "fromSite": "No UEI · No NAICS codes"
+    },
+    {
+      "id": "customers",
+      "question": "Who has Radiance Technologies - Concepts to Capabilities actually delivered for?",
+      "answerable": "yes",
+      "fromSite": "Named on site: NASA"
+    },
+    {
+      "id": "clearance",
+      "question": "Does Radiance Technologies - Concepts to Capabilities hold a facility clearance?",
+      "answerable": "no",
+      "fromSite": "Clearance posture is unstated, so classified-work queries screen the firm out."
+    },
+    {
+      "id": "cost",
+      "question": "What does working with Radiance Technologies - Concepts to Capabilities cost?",
+      "answerable": "no",
+      "fromSite": "No dollar figures anywhere on the site. Cost is unknowable without a human conversation."
+    },
+    {
+      "id": "why-them",
+      "question": "Why choose Radiance Technologies - Concepts to Capabilities over the alternative?",
+      "answerable": "no",
+      "fromSite": "The site never contrasts the firm with an alternative."
+    }
+  ],
+  "notes": [
+    "Every score is the ratio of points earned to points available across the checks listed under each dimension. No curve, no judgment call after the fact.",
+    "This audit reads the site the way a non-rendering agent does: fetch, parse, extract. No browser, no JavaScript execution."
+  ]
+}

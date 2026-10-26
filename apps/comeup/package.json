@@ -1,0 +1,28 @@
+{
+  "name": "comeup",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One archive, one job: turn what you already know into a paid offer and get your first 30 days.",
+  "scripts": {
+    "ingest": "node scripts/build-archive.mjs",
+    "ingest:enrich": "node scripts/build-archive.mjs --enrich",
+    "dev": "next dev -p 4803",
+    "build": "next build",
+    "start": "next start -p 4803",
+    "lint": "eslint .",
+    "mcp": "node mcp/server.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.23",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.7.2"
+  }
+}

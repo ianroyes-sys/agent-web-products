@@ -1,0 +1,29 @@
+{
+  "name": "arsenal-index",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The resource layer for Huntsville defense contracting.",
+  "scripts": {
+    "sync-data": "node scripts/sync-data.mjs",
+    "predev": "npm run sync-data",
+    "dev": "next dev -p 4801",
+    "prebuild": "npm run sync-data",
+    "build": "next build",
+    "start": "next start -p 4801",
+    "lint": "eslint .",
+    "mcp": "node mcp/server.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.7.2"
+  }
+}

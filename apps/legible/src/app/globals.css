@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Royz Media Group — Agent Internet product line
+   Shared tokens across Arsenal Index, Legible, and Come Up.
+
+   Ground and type are constant so the three read as one house.
+   Each product overrides exactly one variable, --accent, which is
+   what makes them siblings rather than clones.
+------------------------------------------------------------------- */
+
+@theme {
+  /* House ground — lifted from the RMG brand kit, unchanged. */
+  --color-ink: #14161a;
+  --color-ink-deep: #0b0c0e;
+  --color-surface: #17181c;
+  --color-raised: #1d1f25;
+  --color-line: #26282e;
+  --color-line-soft: #1f2127;
+  --color-body: #c3c7ce;
+  --color-muted: #7e8593;
+  --color-faint: #565c68;
+  --color-chalk: #f1f2f4;
+
+  /* Parent brand. Always available for the RMG lockup even inside a product. */
+  --color-royal: #2e52ff;
+  --color-royal-deep: #2141dc;
+
+  /* Signal colors, shared. */
+  --color-live: #37d399;
+  --color-warn: #f5a524;
+  --color-hot: #ff5c5c;
+
+  --font-sans: var(--font-grotesk), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-mono-stack), "SF Mono", ui-monospace, Menlo, monospace;
+
+  --ease-step: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --nav-h: 64px;
+    /* Legible's override: signal green. The product grades readability,
+       so the brand color is the color of a passing check. */
+    --accent: #37d399;
+    --accent-dim: color-mix(in oklab, var(--accent) 22%, transparent);
+    --accent-line: color-mix(in oklab, var(--accent) 38%, transparent);
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 24px);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-ink-deep);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+
+  ::selection { background: var(--accent); color: #06231a; }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--color-chalk);
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  /* Tabular figures everywhere money appears. Misaligned dollar columns are
+     the fastest way to make a data product look amateur. */
+  .num, td.num, .tabular {
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-mono);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .wrap { width: 100%; max-width: 1180px; margin-inline: auto; padding-inline: 20px; }
+  @media (min-width: 768px) { .wrap { padding-inline: 32px; } }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    height: 42px; padding-inline: 18px;
+    border-radius: 10px; border: 1px solid transparent;
+    font-size: 14px; font-weight: 500; line-height: 1;
+    transition: transform 0.18s var(--ease-out), background 0.18s, border-color 0.18s;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--accent); color: #06231a; font-weight: 600; }
+  .btn-primary:hover { background: color-mix(in oklab, var(--accent) 88%, white); }
+  .btn-ghost { border-color: var(--color-line); color: var(--color-chalk); }
+  .btn-ghost:hover { border-color: var(--accent-line); }
+
+  /* Status pill. Freshness is the product in a data business, so the
+     generated-on date gets first-class visual treatment, not a footnote. */
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    height: 26px; padding-inline: 10px;
+    border-radius: 99px; border: 1px solid var(--color-line);
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--color-muted);
+  }
+  .pill-live { border-color: color-mix(in oklab, var(--color-live) 40%, transparent); color: var(--color-live); }
+  .dot { width: 6px; height: 6px; border-radius: 99px; background: currentColor; }
+}
+
+/* ------------------------------------------------------------------
+   Legible-specific layer.
+
+   The instrument metaphor is load-bearing: hairline rules, tabular
+   numbers, measured motion. A report has to look like a reading taken
+   off a machine, because that is exactly what it is.
+------------------------------------------------------------------- */
+
+@layer components {
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--color-line) 55%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--color-line) 55%, transparent) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 78%);
+  }
+
+  .glass {
+    background: color-mix(in oklab, var(--color-surface) 72%, transparent);
+    backdrop-filter: blur(14px) saturate(1.3);
+    -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  }
+
+  .hair { border-top: 1px solid var(--color-line-soft); }
+
+  .rule-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+
+  /* Verdict colors. Green means an agent can answer; red means it cannot. */
+  .v-pass { color: var(--color-live); }
+  .v-partial { color: var(--color-warn); }
+  .v-fail { color: var(--color-hot); }
+  .v-info { color: var(--color-muted); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 3px 9px; border-radius: 6px;
+    border: 1px solid var(--color-line);
+    background: var(--color-raised);
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--color-muted);
+    white-space: nowrap;
+  }
+  .chip-pass { border-color: color-mix(in oklab, var(--color-live) 34%, transparent); color: var(--color-live); }
+  .chip-partial { border-color: color-mix(in oklab, var(--color-warn) 34%, transparent); color: var(--color-warn); }
+  .chip-fail { border-color: color-mix(in oklab, var(--color-hot) 30%, transparent); color: var(--color-hot); }
+
+  .quote {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--color-body);
+    border-left: 2px solid var(--accent-line);
+    padding: 8px 0 8px 14px;
+    background: linear-gradient(90deg, color-mix(in oklab, var(--accent) 7%, transparent), transparent 60%);
+  }
+
+  .meter { height: 6px; border-radius: 99px; background: var(--color-raised); overflow: hidden; }
+  .meter > span { display: block; height: 100%; border-radius: 99px; }
+
+  .link-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-line);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.18s;
+  }
+  .link-underline:hover { text-decoration-color: var(--accent); }
+}
+
+@layer utilities {
+  /* Entrance motion. Short, once, never on scroll-jack. */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes sweep {
+    from { stroke-dashoffset: var(--dash-full); }
+    to { stroke-dashoffset: var(--dash-target); }
+  }
+  @keyframes fill-bar {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  .anim-rise { animation: rise 0.62s var(--ease-step) both; }
+  .anim-fade { animation: fade 0.8s var(--ease-out) both; }
+  .anim-sweep { animation: sweep 1.15s var(--ease-step) 0.15s both; }
+  .anim-bar { transform-origin: left; animation: fill-bar 0.9s var(--ease-step) both; }
+}

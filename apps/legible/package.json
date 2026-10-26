@@ -1,0 +1,28 @@
+{
+  "name": "legible",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Agent readiness audits. Make your company legible to the machines that now decide.",
+  "scripts": {
+    "dev": "next dev -p 4802",
+    "build": "next build",
+    "start": "next start -p 4802",
+    "audit": "node scripts/audit.mjs",
+    "battery": "node scripts/battery.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.7.2"
+  }
+}

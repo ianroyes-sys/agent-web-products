@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-01-10T00:00:00.000Z",
+  "sources": [
+    {
+      "id": "sample-blog",
+      "label": "Sample Blog",
+      "origin": "Fictional example data. Run scripts/build-archive.mjs against your own archive.",
+      "url": "https://example.com",
+      "count": 3
+    }
+  ],
+  "items": [
+    {
+      "id": "sample-1",
+      "title": "Why I ship before I polish",
+      "source": "Sample Blog",
+      "url": "https://example.com",
+      "date": "2026-01-01",
+      "kind": "essay",
+      "pull": "Shipping early shows you what to fix.",
+      "body": "Shipping a rough version early tells you which parts people actually use. Polish those, cut the rest.",
+      "seedTags": {
+        "job": [
+          "validate",
+          "pick-customer",
+          "find-wedge"
+        ],
+        "topic": [
+          "market",
+          "idea",
+          "wedge",
+          "examples"
+        ],
+        "audience": [
+          "freelancer",
+          "agency-owner",
+          "first-time-founder"
+        ],
+        "framework": [
+          "return-equation"
+        ],
+        "example": [
+          "insurance-broker-app"
+        ],
+        "outcome": [
+          "turned-down-work"
+        ]
+      }
+    },
+    {
+      "id": "sample-2",
+      "title": "A checklist for a first client project",
+      "source": "Sample Blog",
+      "url": "https://example.com",
+      "date": "2026-01-02",
+      "kind": "note",
+      "pull": "Scope, price, deadline, and one decision-maker.",
+      "body": "Before starting client work, write down scope, price, deadline, and who signs off. Most problems start with one of those missing.",
+      "seedTags": {
+        "job": [
+          "validate",
+          "pick-customer",
+          "find-wedge"
+        ],
+        "topic": [
+          "market",
+          "idea",
+          "wedge",
+          "examples"
+        ],
+        "audience": [
+          "freelancer",
+          "agency-owner",
+          "first-time-founder"
+        ],
+        "framework": [
+          "return-equation"
+        ],
+        "example": [
+          "insurance-broker-app"
+        ],
+        "outcome": [
+          "turned-down-work"
+        ]
+      }
+    },
+    {
+      "id": "sample-3",
+      "title": "Notes from a week of cold outreach",
+      "source": "Sample Blog",
+      "url": "https://example.com",
+      "date": "2026-01-03",
+      "kind": "note",
+      "pull": "Short emails with one clear ask got the replies.",
+      "body": "Short emails with one specific question did better than long pitches. Personalisation mattered more than templates.",
+      "seedTags": {
+        "job": [
+          "validate",
+          "pick-customer",
+          "find-wedge"
+        ],
+        "topic": [
+          "market",
+          "idea",
+          "wedge",
+          "examples"
+        ],
+        "audience": [
+          "freelancer",
+          "agency-owner",
+          "first-time-founder"
+        ],
+        "framework": [
+          "return-equation"
+        ],
+        "example": [
+          "insurance-broker-app"
+        ],
+        "outcome": [
+          "turned-down-work"
+        ]
+      }
+    }
+  ]
+}
